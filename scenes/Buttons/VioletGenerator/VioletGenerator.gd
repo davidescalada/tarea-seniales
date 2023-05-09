@@ -12,4 +12,11 @@ func _process(delta):
 
 
 func _on_button_down():
+	generate_block()
 	pass 
+	
+func generate_block():
+	var resourceVioletBlock = preload("res://scenes/Blocks/Violet/BlockViolet.tscn")
+	var instanceVioletBlock = resourceVioletBlock.instantiate()
+	add_child(instanceVioletBlock)
+	pass
